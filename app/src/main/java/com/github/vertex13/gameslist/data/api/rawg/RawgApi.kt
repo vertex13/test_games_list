@@ -6,7 +6,7 @@ import retrofit2.http.Query
 import java.text.SimpleDateFormat
 import java.util.*
 
-private val actualPlatforms = listOf(4, 187, 1, 18, 186)
+private const val ACTUAL_PLATFORMS = "4,187,1,18,186"
 
 interface RawgApi {
     companion object {
@@ -18,7 +18,7 @@ interface RawgApi {
         @Query("page") page: Int? = null,
         @Query("page_size") pageSize: Int? = null,
         @Query("dates") dates: Dates? = null,
-        @Query("platforms") platforms: List<Int>? = actualPlatforms,
+        @Query("platforms") platforms: String? = ACTUAL_PLATFORMS,
         @Query("ordering") ordering: Ordering? = null
     ): GetGamesResponse
 }
@@ -29,7 +29,7 @@ class Dates(private val from: Date, private val to: Date) {
     }
 
     override fun toString(): String {
-        return "${formatter.format(from)}, ${formatter.format(to)}"
+        return "${formatter.format(from)},${formatter.format(to)}"
     }
 }
 

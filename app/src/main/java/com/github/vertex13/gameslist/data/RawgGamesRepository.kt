@@ -11,10 +11,11 @@ class RawgGamesRepository(
 ) : GamesRepository {
 
     override suspend fun getGames(category: GameCategory, page: Int, size: Int): Page<Game> {
+        val rawgPageNumber = page.inc()
         return when (category) {
-            MostAnticipatedCategory -> getMostAnticipated(page, size)
-            LatestCategory -> getLatest(page, size)
-            is MostRatedCategory -> getMostRated(category.year, page, size)
+            MostAnticipatedCategory -> getMostAnticipated(rawgPageNumber, size)
+            LatestCategory -> getLatest(rawgPageNumber, size)
+            is MostRatedCategory -> getMostRated(category.year, rawgPageNumber, size)
         }
     }
 
