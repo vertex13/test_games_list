@@ -26,6 +26,6 @@ fun defaultHttpClient(): OkHttpClient {
 
 fun loggingInterceptor(): Interceptor {
     return HttpLoggingInterceptor().apply {
-        setLevel(HttpLoggingInterceptor.Level.BODY)
+        setLevel(HttpLoggingInterceptor.Level.BASIC)
     }
 }
