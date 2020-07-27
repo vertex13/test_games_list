@@ -51,6 +51,9 @@ class GamesListFragment : BaseFragment() {
     private fun updateCategoryView(view: GameCategoryView, data: CategoryData) {
         view.setIsLoading(data.isLoading)
         view.setGames(data.games)
+        if (!data.isLoading && data.games.isEmpty()) {
+            view.visibility = View.GONE
+        }
     }
 
     private fun onGameClick(game: Game) {

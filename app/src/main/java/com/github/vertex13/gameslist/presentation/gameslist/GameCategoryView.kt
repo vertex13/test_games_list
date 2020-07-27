@@ -64,7 +64,11 @@ class GameCategoryView : LinearLayout {
     }
 
     fun setGames(games: List<Game>) {
+        val recyclerViewResized = gamesAdapter.itemCount == 0 && games.isNotEmpty()
         gamesAdapter.setItems(games)
+        if (recyclerViewResized) {
+            gcv_recyclerView.requestLayout()
+        }
     }
 
     fun setOnRequestMoreGames(callback: (() -> Unit)?) {
