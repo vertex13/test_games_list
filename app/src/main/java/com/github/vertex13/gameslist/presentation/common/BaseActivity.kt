@@ -11,12 +11,12 @@ abstract class BaseActivity : AppCompatActivity() {
         private const val FRAGMENT_CONTAINER_ID = R.id.fragment_container
     }
 
-    fun addFragment(fragment: Fragment) {
+    fun pushFragment(fragment: Fragment) {
         if (findViewById<View>(FRAGMENT_CONTAINER_ID) == null) {
             throw IllegalStateException("Activity $this does not have a fragment container.")
         }
         supportFragmentManager.beginTransaction()
-            .add(FRAGMENT_CONTAINER_ID, fragment)
+            .replace(FRAGMENT_CONTAINER_ID, fragment)
             .addToBackStack(null)
             .commit()
     }

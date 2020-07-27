@@ -1,6 +1,6 @@
 package com.github.vertex13.gameslist.domain
 
-data class Game(
+open class Game(
     val id: Long,
     val name: String,
     val imageUrl: String,

@@ -1,14 +1,13 @@
 package com.github.vertex13.gameslist.presentation.gameslist
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.github.vertex13.gameslist.R
 import com.github.vertex13.gameslist.domain.Game
 import com.github.vertex13.gameslist.presentation.common.BaseFragment
+import com.github.vertex13.gameslist.presentation.gamedetails.GameDetailsFragment
 import kotlinx.android.synthetic.main.fragment_games_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,13 +19,7 @@ class GamesListFragment : BaseFragment() {
 
     private val model: GamesListViewModel by viewModel()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_games_list, container, false)
-    }
+    override val layoutId: Int = R.layout.fragment_games_list
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -61,7 +54,7 @@ class GamesListFragment : BaseFragment() {
     }
 
     private fun onGameClick(game: Game) {
-        //
+        requireBaseActivity().pushFragment(GameDetailsFragment.newInstance(game))
     }
 
 }
