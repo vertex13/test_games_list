@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.vertex13.gameslist.domain.*
+import com.github.vertex13.gameslist.usecases.GetGames
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
