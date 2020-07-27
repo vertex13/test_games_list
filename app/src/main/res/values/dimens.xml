@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="game_item_width_wide">220dp</dimen>
+    <dimen name="game_item_height_wide">160dp</dimen>
+    <dimen name="game_item_width_narrow">120dp</dimen>
+    <dimen name="game_item_height_narrow">220dp</dimen>
+    <dimen name="game_item_padding">8dp</dimen>
+    <dimen name="game_item_image_corner_radius">8dp</dimen>
+</resources>

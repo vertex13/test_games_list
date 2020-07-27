@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GamesList</string>
+
+    <string name="games_list_error">Could not load data</string>
+    <string name="game_category_title_most_anticipated">The most anticipated</string>
+    <string name="game_category_title_latest">Latest releases</string>
+    <string name="game_category_title_most_rated_2020">The most rated in 2020</string>
 </resources>

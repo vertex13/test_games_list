@@ -21,4 +21,12 @@ abstract class BaseActivity : AppCompatActivity() {
             .commit()
     }
 
+    override fun onBackPressed() {
+        val fragmentsInStack = supportFragmentManager.backStackEntryCount
+        when {
+            fragmentsInStack > 1 -> supportFragmentManager.popBackStack()
+            fragmentsInStack == 1 -> finish()
+            else -> super.onBackPressed()
+        }
+    }
 }

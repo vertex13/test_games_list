@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="game_item_width_wide">280dp</dimen>
+    <dimen name="game_item_height_wide">120dp</dimen>
+    <dimen name="game_item_width_narrow">160dp</dimen>
+    <dimen name="game_item_height_narrow">140dp</dimen>
+</resources>

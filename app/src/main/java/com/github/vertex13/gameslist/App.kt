@@ -3,6 +3,7 @@ package com.github.vertex13.gameslist
 import android.app.Application
 import com.github.vertex13.gameslist.data.dataModule
 import com.github.vertex13.gameslist.domain.useCaseModule
+import com.github.vertex13.gameslist.presentation.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,7 +12,7 @@ class App : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@App)
-            modules(dataModule, useCaseModule)
+            modules(dataModule, useCaseModule, presentationModule)
         }
     }
 }

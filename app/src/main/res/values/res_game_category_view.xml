@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gcv_progress_bar_size">16dp</dimen>
+
+    <declare-styleable name="GameCategoryView">
+        <attr name="gcv_title" format="string" />
+        <attr name="gcv_item_width" format="dimension" />
+        <attr name="gcv_item_height" format="dimension" />
+    </declare-styleable>
+</resources>
